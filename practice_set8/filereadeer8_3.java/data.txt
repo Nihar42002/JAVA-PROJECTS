@@ -1,0 +1,5 @@
+Write a Java program that reads a text file named data.txt. The program should count and
+display: The total number of lines, The total number of words, The total number of
+characters (excluding spaces and newline characters), Use FileReader / BufferedReader for
+reading the file.
+Handle exceptions like FileNotFoundException and IOException
