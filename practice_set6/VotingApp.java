@@ -1,4 +1,3 @@
-package practice_set6;
 import java.util.Scanner;
 
 public class VotingApp {

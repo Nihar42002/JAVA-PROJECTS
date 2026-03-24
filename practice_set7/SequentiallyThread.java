@@ -1,5 +1,3 @@
-package practice_set7;
-
 class T1 extends Thread{
     public void run(){
         for(int i = 1; i <= 100; i++){

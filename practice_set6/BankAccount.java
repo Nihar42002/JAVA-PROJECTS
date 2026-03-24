@@ -1,5 +1,3 @@
-package practice_set6;
-
 class  NotSufficientFundException extends Exception {
     public NotSufficientFundException(String message) {
         super(message);

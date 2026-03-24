@@ -1,5 +1,3 @@
-package practice_set6;
-
 public class Num_And_Demo {
     public static void main(String[] args){
         

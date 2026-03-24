@@ -1,5 +1,3 @@
-package practice_set7;
-
 class sum extends Thread{
 
     private int start, end;
