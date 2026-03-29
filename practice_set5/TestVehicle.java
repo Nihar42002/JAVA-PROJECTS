@@ -1,3 +1,4 @@
+package practice_set5;
 abstract class vehicle {
     abstract String fuelType();
     abstract int wheels();

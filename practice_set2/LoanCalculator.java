@@ -1,3 +1,5 @@
+package practice_set2;
+
 import java.util.Scanner;
 
 class LoanMethods {

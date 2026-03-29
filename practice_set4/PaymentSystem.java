@@ -1,3 +1,5 @@
+package practice_set4;
+
 import java.util.Scanner;
 
 class Payment{

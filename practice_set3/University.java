@@ -1,3 +1,4 @@
+package practice_set3;
 class college{
     static int totalStudents;
     static String collegeName;

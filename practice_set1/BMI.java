@@ -1,3 +1,4 @@
+package practice_set1;
 import java.util.Scanner;
 
 public class BMI {

@@ -1,3 +1,4 @@
+package practice_set4;
 class ShapeData{
     double d1;
     double d2;

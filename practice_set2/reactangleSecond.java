@@ -1,3 +1,4 @@
+package practice_set2;
 class reactanglecompare{
     int width;
     int height;

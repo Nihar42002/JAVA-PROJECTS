@@ -1,3 +1,4 @@
+package practice_set6;
 public class method_avaerage {
     
     public static double method_aveerage(String[] values)

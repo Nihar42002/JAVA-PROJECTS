@@ -1,3 +1,4 @@
+package practice_set3;
 class Bank{
 static double interestRate=7.0;
 String accountHolderName;

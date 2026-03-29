@@ -1,3 +1,4 @@
+package practice_set1;
 import java.util.Scanner;
 
 public class cramer_rule_1_2 {

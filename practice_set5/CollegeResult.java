@@ -1,3 +1,4 @@
+package practice_set5;
 interface Exam{
 
 boolean isPassed(int mark);

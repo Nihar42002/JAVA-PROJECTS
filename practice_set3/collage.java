@@ -1,3 +1,5 @@
+package practice_set3;
+
 import java.util.*;
 
 class Clg{

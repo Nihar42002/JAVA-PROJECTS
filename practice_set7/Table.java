@@ -1,3 +1,4 @@
+package practice_set7;
 class T5{
 
     synchronized void printTable(int n){
