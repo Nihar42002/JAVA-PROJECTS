@@ -1,14 +1,17 @@
-package java_class_peoject.services1;
-import java_class_peoject.model1.product;
+package E_commerce_raw_code.services1;
+import E_commerce_raw_code.model1.product;
 import java.util.*;
+import E_commerce_raw_code.model1.product;
 
  public class Cart {
    HashMap<product, Integer> items = new HashMap<>();
 
-public void addItem(product p, int qty) {
+ public void addItem(product p, int qty) throws InvalidQuantityException {
+        if (qty <= 0) {
+            throw new InvalidQuantityException("Quantity must be greater than 0!");
+        }
         items.put(p, items.getOrDefault(p, 0) + qty);
     }
-
 
     public void displayCart() {
         if (items.isEmpty()) {

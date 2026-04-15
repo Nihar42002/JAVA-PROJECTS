@@ -1,4 +1,4 @@
-package java_class_peoject.model1;
+package E_commerce_raw_code.model1;
 
 public class product {
     public int id;

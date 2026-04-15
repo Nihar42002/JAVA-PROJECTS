@@ -1,17 +1,21 @@
-package java_class_peoject.Main;
+package E_commerce_raw_code.Main;
 import java.util.*;
-import java_class_peoject.model1.product;
-import java_class_peoject.services1.Cart;
-import java_class_peoject.services1.Discount;
-import java_class_peoject.services1.OrderProcessor;
+import E_commerce_raw_code.model1.product;
+import E_commerce_raw_code.services1.Cart;
+import E_commerce_raw_code.services1.Discount;
+import E_commerce_raw_code.services1.InvalidQuantityException;
+import E_commerce_raw_code.services1.OrderProcessor;
+import E_commerce_raw_code.model1.Mobile;
+import E_commerce_raw_code.model1.Electronics;
 
-public class main {
+public class main { 
  public static void main(String[] args) {
      Scanner sc = new Scanner(System.in);
+
        ArrayList<product> products = new ArrayList<>();
-         products.add(new product(1, "Laptop", 50000, 5));
-        products.add(new product(2, "Phone", 20000, 2));
-        products.add(new product(3, "Headphones", 2000, 10));
+         products.add(new Mobile(1, "iPhone", 70000, 5, 12, "Apple"));
+        products.add(new Mobile(2, "Samsung", 40000, 3, 12, "Samsung"));
+        products.add(new Electronics(3, "TV", 30000, 2, 24));
 
          Cart cart = new Cart();
         Discount discount = null;
@@ -42,6 +46,7 @@ public class main {
                     case 2:
                         System.out.print("Enter Product ID: ");
                         int id = sc.nextInt();
+
                         System.out.print("Enter Quantity: ");
                         int qty = sc.nextInt();
 
@@ -52,13 +57,17 @@ public class main {
                             break;
                         }
                     }
-                     if (selected == null) {
-                        System.out.println("Product not found!");
-                    } else if (!selected.isAvailable(qty)) {
-                        System.out.println("Not enough stock!");
-                    } else {
-                        cart.addItem(selected, qty);
-                        System.out.println("Item added to cart.");
+                    try {
+                        if (selected == null) {
+                            System.out.println("Product not found!");
+                        } else if (!selected.isAvailable(qty)) {
+                            System.out.println("Not enough stock!");
+                        } else {
+                            cart.addItem(selected, qty);
+                            System.out.println("Item added to cart.");
+                        }
+                    } catch (InvalidQuantityException e) {
+                        System.out.println(e.getMessage());
                     }
                     break;
 

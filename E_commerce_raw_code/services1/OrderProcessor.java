@@ -1,5 +1,6 @@
-package java_class_peoject.services1;
-import java_class_peoject.model1.product;
+package E_commerce_raw_code.services1;
+import E_commerce_raw_code.model1.product;
+import java.io.*;
 
 public class OrderProcessor {
      static final double TAX_RATE = 0.18;
@@ -32,13 +33,19 @@ public class OrderProcessor {
         System.out.println("--------------------------");
         System.out.println("FINAL AMOUNT: Rupees: " + finalAmount);
 
+          try {
+            FileWriter fw = new FileWriter("orders.txt", true);
+            fw.write("Order Total: ₹" + finalAmount + "\n");
+            fw.close();
+        } catch (IOException e) {
+            System.out.println("Error saving order!");
+        }
+
         for (product p : cart.items.keySet()) {
             p.reduceStock(cart.items.get(p));
         }
 
-
         cart.clearCart();
         System.out.println("Order placed successfully!");
     }
-}
-    
+}  

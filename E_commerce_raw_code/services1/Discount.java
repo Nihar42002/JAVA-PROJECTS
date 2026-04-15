@@ -1,4 +1,4 @@
-package java_class_peoject.services1;
+package E_commerce_raw_code.services1;
 
 public class Discount {
     String code;
@@ -15,7 +15,7 @@ public class Discount {
     public boolean isApplicable(String inputCode, double total) {
        return code.equalsIgnoreCase(inputCode) && total >= minPurchase;
     }
-  double apply(double total) {
+ public double apply(double total) {
         return total * percent / 100;
     }
 }
