@@ -1,4 +1,4 @@
-package ReportCard.Exam;
+package practice_set5.ReportCard.Exam;
 import ReportCard.Student.student;
 
 public class Marksheet {
